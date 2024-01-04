@@ -13,5 +13,8 @@ COPY package*.json /app
 RUN npm ci
 COPY . /app
 
+RUN chown -R node:node /app
+USER node
+
 CMD ["node","index.js"]
 EXPOSE 8080
