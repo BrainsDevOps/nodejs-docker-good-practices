@@ -8,6 +8,10 @@ ENTRYPOINT ["/tini", "--"]
 
 ENV NODE_ENV=production
 
+ARG GITHUB_PAT
+ENV npm_token=${GITHUB_PAT}
+COPY example.npmrc /app/.npmrc
+
 WORKDIR /app
 COPY package*.json /app
 RUN npm ci

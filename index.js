@@ -1,6 +1,6 @@
 //now it load express module with `require` directive
 let express = require('express')
-const dice = require('./dice')
+const dice = require('@brainsdevops/dice');
 let app = express()
 //Define request response in root URL (/) and response with a die number!
 app.get('/', function (req, res) {
