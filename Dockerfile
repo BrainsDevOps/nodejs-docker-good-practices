@@ -1,4 +1,4 @@
-FROM brainsdevops/node
+FROM node:21.5.0-bookworm-slim
 
 # Lightweight init
 ENV TINI_VERSION v0.19.0
