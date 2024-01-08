@@ -15,7 +15,7 @@ COPY example.npmrc /app/.npmrc
 WORKDIR /app
 COPY package*.json /app
 RUN npm ci
-COPY . /app
+COPY index.js /app
 
 RUN chown -R node:node /app
 USER node
